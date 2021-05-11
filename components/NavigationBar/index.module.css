@@ -1,0 +1,13 @@
+.menuContainer {
+  display: flex;
+  background-color: lightgrey;
+  justify-content: flex-end;
+}
+
+.menuItem {
+  margin: 4px;
+}
+
+.selected {
+  color: red;
+}
