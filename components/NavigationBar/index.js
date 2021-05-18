@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import classnames from "classnames";
-import styles from "./index.module.css";
+import styles from "./index.module.scss";
 
 const navigationItems = [
   {
@@ -20,7 +20,6 @@ const navigationItems = [
 
 export const NavigationBar = () => {
   const { pathname } = useRouter();
-  console.log(pathname);
   return (
     <div className={styles.menuContainer}>
       {navigationItems.map(({ label, path }) => (
