@@ -1,6 +1,8 @@
 import Head from "next/head";
 import { NavigationBar } from "../components/NavigationBar";
 
+import styles from "../styles/aboutUs.module.scss";
+
 export const AboutUs = () => (
   <div>
     <Head>
@@ -9,7 +11,7 @@ export const AboutUs = () => (
     </Head>
     <NavigationBar />
     <main>
-      <h1>About us</h1>
+      <h1 className={styles.header}>About us</h1>
 
       <p>Some stuff about something</p>
     </main>

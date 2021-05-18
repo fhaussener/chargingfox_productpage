@@ -1,6 +1,8 @@
 import Head from "next/head";
 import { NavigationBar } from "../components/NavigationBar";
 
+import styles from "../styles/partner.module.scss";
+
 export const Partner = () => (
   <div>
     <Head>
@@ -9,7 +11,7 @@ export const Partner = () => (
     </Head>
     <NavigationBar />
     <main>
-      <h1>Partner and Sponsoring Page</h1>
+      <h1 className={styles.header}>Partner and Sponsoring Page</h1>
 
       <p>Some stuff about something</p>
     </main>

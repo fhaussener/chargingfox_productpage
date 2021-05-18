@@ -1,9 +1,11 @@
 import Head from "next/head";
+import { useState } from "react";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
 import { SelectorIcon } from "@heroicons/react/solid";
 import { FeatureCard } from "../components/FeatureCard";
 import { NavigationBar } from "../components/NavigationBar";
-import { useState } from "react";
+
+import styles from "../styles/home.module.scss";
 
 const featuresLader = [
   {
@@ -71,9 +73,16 @@ function Home({ mailchimpLink }) {
         Toggle features
       </button>
       <div>
-        {getFeatureList(isLaderFeature).map(({ icon, title, description }) => (
-          <FeatureCard icon={icon} title={title} description={description} />
-        ))}
+        {getFeatureList(isLaderFeature).map(
+          ({ icon, title, description }, index) => (
+            <FeatureCard
+              key={`card-${index}`}
+              icon={icon}
+              title={title}
+              description={description}
+            />
+          )
+        )}
       </div>
 
       <footer>Some footer</footer>
