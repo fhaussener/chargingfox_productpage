@@ -4,10 +4,12 @@ import MailchimpSubscribe from "react-mailchimp-subscribe";
 import { SelectorIcon } from "@heroicons/react/solid";
 import { FeatureCard } from "../components/FeatureCard";
 import { NavigationBar } from "../components/NavigationBar";
+import { FeatureToggle } from "../components/FeatureToggle";
+import { MapLocations } from "../components/Map";
 
 import styles from "../styles/home.module.scss";
 
-const featuresLader = [
+const featuresVermieter = [
   {
     icon: <SelectorIcon />,
     title: "Freigabe von Ladestation",
@@ -28,7 +30,7 @@ const featuresLader = [
   },
 ];
 
-const featuresVermieter = [
+const featuresLader = [
   {
     icon: <SelectorIcon />,
     title: "Freie Ladestation in der Nähe finden",
@@ -65,26 +67,36 @@ function Home({ mailchimpLink }) {
       </Head>
       <NavigationBar />
       <main>
-        <h1>Home landingpage</h1>
-        <h3>Subscribe for product updates</h3>
-        <MailchimpSubscribe url={mailchimpLink} />
-      </main>
-      <button onClick={() => setIsLaderFeature(!isLaderFeature)}>
-        Toggle features
-      </button>
-      <div>
-        {getFeatureList(isLaderFeature).map(
-          ({ icon, title, description }, index) => (
-            <FeatureCard
-              key={`card-${index}`}
-              icon={icon}
-              title={title}
-              description={description}
-            />
-          )
-        )}
-      </div>
+        <div className={styles.Header}>
+          <h2>Finde eine freie Ladestation in Sekunden</h2>
+          <h3>Subscribe for product updates</h3>
+          <MailchimpSubscribe url={mailchimpLink} />
+        </div>
 
+        <div className={styles.Features}>
+          <h2>Features für...</h2>
+          <FeatureToggle
+            isLader={isLaderFeature}
+            onClick={(isLader) => setIsLaderFeature(isLader)}
+          />
+          <div className={styles.featureList}>
+            {getFeatureList(isLaderFeature).map(
+              ({ icon, title, description }, index) => (
+                <FeatureCard
+                  key={`card-${index}`}
+                  icon={icon}
+                  title={title}
+                  description={description}
+                />
+              )
+            )}
+          </div>
+        </div>
+        <div className={styles.Map}>
+          <h2>Unsere Ladestationen</h2>
+          <MapLocations />
+        </div>
+      </main>
       <footer>Some footer</footer>
     </div>
   );

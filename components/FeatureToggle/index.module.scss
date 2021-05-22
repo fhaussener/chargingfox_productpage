@@ -1,0 +1,11 @@
+.ToggleContainer {
+  .menuItem {
+    background: none;
+    border: none;
+  }
+
+  .selected {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+}
