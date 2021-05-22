@@ -1,7 +1,14 @@
 import Head from "next/head";
 import { useState } from "react";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
-import { SelectorIcon } from "@heroicons/react/solid";
+import {
+  SelectorIcon,
+  MapIcon,
+  ClipboardListIcon,
+  LightningBoltIcon,
+  ChartSquareBarIcon,
+  CurrencyDollarIcon,
+} from "@heroicons/react/outline";
 import { FeatureCard } from "../components/FeatureCard";
 import { NavigationBar } from "../components/NavigationBar";
 import { FeatureToggle } from "../components/FeatureToggle";
@@ -17,13 +24,13 @@ const featuresVermieter = [
       "Die private Station kann jederzeit für andere Personen freigegeben werden",
   },
   {
-    icon: <SelectorIcon />,
+    icon: <MapIcon />,
     title: "Bestes Zeitfenster für Freigabe finden",
     description:
       "Man kann man die Zeiten mit dem besten Verdienst, durch unser Dynamic Pricing finden",
   },
   {
-    icon: <SelectorIcon />,
+    icon: <ClipboardListIcon />,
     title: "Geld verdienen mit Freigabe",
     description:
       "Die Benutzung durch andere Personen wird entschädigt und kann ausgezahlt werden",
@@ -32,19 +39,19 @@ const featuresVermieter = [
 
 const featuresLader = [
   {
-    icon: <SelectorIcon />,
+    icon: <LightningBoltIcon />,
     title: "Freie Ladestation in der Nähe finden",
     description:
       "Auf der Karte kann man jederzeit sehen, welche Ladestationen zurzeit frei sind",
   },
   {
-    icon: <SelectorIcon />,
+    icon: <ChartSquareBarIcon />,
     title: "Zusatzinfos zur Station finden",
     description:
       "Zur jeder Ladestation kann man Zusatzinfos zur Lage, Steckertyp und weiteres finden",
   },
   {
-    icon: <SelectorIcon />,
+    icon: <CurrencyDollarIcon />,
     title: "Einfache Bezahlung via App",
     description:
       "Zahlungen werden akzeptiert via Kreditkarte, Apple Pay, Google Pay und Twint",
