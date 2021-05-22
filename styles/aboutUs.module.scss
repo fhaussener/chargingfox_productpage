@@ -6,3 +6,12 @@
   font-size: 30px;
   margin: 0 250px 0 250px;
 }
+.values{
+  display: flex;
+  height: 200px;
+}
+.value{
+  width: 200px;
+  justify-content: flex-end;
+  //flex-direction: row;
+}
