@@ -1,9 +1,10 @@
 import Head from "next/head";
 import { useState } from "react";
+import Image from "next/image";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
 import {
-  SelectorIcon,
   MapIcon,
+  CreditCardIcon,
   ClipboardListIcon,
   LightningBoltIcon,
   ChartSquareBarIcon,
@@ -18,13 +19,13 @@ import styles from "../styles/home.module.scss";
 
 const featuresVermieter = [
   {
-    icon: <SelectorIcon />,
+    icon: <MapIcon />,
     title: "Freigabe von Ladestation",
     description:
       "Die private Station kann jederzeit für andere Personen freigegeben werden",
   },
   {
-    icon: <MapIcon />,
+    icon: <CreditCardIcon />,
     title: "Bestes Zeitfenster für Freigabe finden",
     description:
       "Man kann man die Zeiten mit dem besten Verdienst, durch unser Dynamic Pricing finden",
@@ -75,9 +76,17 @@ function Home({ mailchimpLink }) {
       <NavigationBar />
       <main>
         <div className={styles.Header}>
-          <h2>Finde eine freie Ladestation in Sekunden</h2>
-          <h3>Werde informiert wenn die App ready ist</h3>
-          <MailchimpSubscribe url={mailchimpLink} />
+          <div>
+            <h2>Finde eine freie Ladestation in Sekunden</h2>
+            <h3>Werde informiert wenn die App ready ist</h3>
+            <MailchimpSubscribe url={mailchimpLink} />
+          </div>
+          <Image
+            src="/headerImgHome.png"
+            objectFit="contain"
+            width={700}
+            height={400}
+          />
         </div>
 
         <div className={styles.Features}>
