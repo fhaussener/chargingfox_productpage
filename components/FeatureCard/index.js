@@ -4,8 +4,8 @@ export const FeatureCard = ({ icon, title, description }) => {
   return (
     <div className={styles.CardContainer}>
       <div className={styles.iconContainer}>{icon}</div>
-      <h1>{title}</h1>
-      <p>{description}</p>
+      <h2 className={styles.bigTitle}>{title}</h2>
+      <p className={styles.description}>{description}</p>
     </div>
   );
 };

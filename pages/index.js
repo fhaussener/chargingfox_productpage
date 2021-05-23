@@ -1,48 +1,58 @@
 import Head from "next/head";
 import { useState } from "react";
+import Image from "next/image";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
-import { SelectorIcon } from "@heroicons/react/solid";
+import {
+  MapIcon,
+  CreditCardIcon,
+  ClipboardListIcon,
+  LightningBoltIcon,
+  ChartSquareBarIcon,
+  CurrencyDollarIcon,
+} from "@heroicons/react/outline";
 import { FeatureCard } from "../components/FeatureCard";
 import { NavigationBar } from "../components/NavigationBar";
+import { FeatureToggle } from "../components/FeatureToggle";
+import { MapLocations } from "../components/Map";
 
 import styles from "../styles/home.module.scss";
 
-const featuresLader = [
+const featuresVermieter = [
   {
-    icon: <SelectorIcon />,
+    icon: <MapIcon />,
     title: "Freigabe von Ladestation",
     description:
       "Die private Station kann jederzeit für andere Personen freigegeben werden",
   },
   {
-    icon: <SelectorIcon />,
+    icon: <CreditCardIcon />,
     title: "Bestes Zeitfenster für Freigabe finden",
     description:
       "Man kann man die Zeiten mit dem besten Verdienst, durch unser Dynamic Pricing finden",
   },
   {
-    icon: <SelectorIcon />,
+    icon: <ClipboardListIcon />,
     title: "Geld verdienen mit Freigabe",
     description:
       "Die Benutzung durch andere Personen wird entschädigt und kann ausgezahlt werden",
   },
 ];
 
-const featuresVermieter = [
+const featuresLader = [
   {
-    icon: <SelectorIcon />,
+    icon: <LightningBoltIcon />,
     title: "Freie Ladestation in der Nähe finden",
     description:
       "Auf der Karte kann man jederzeit sehen, welche Ladestationen zurzeit frei sind",
   },
   {
-    icon: <SelectorIcon />,
+    icon: <ChartSquareBarIcon />,
     title: "Zusatzinfos zur Station finden",
     description:
       "Zur jeder Ladestation kann man Zusatzinfos zur Lage, Steckertyp und weiteres finden",
   },
   {
-    icon: <SelectorIcon />,
+    icon: <CurrencyDollarIcon />,
     title: "Einfache Bezahlung via App",
     description:
       "Zahlungen werden akzeptiert via Kreditkarte, Apple Pay, Google Pay und Twint",
@@ -65,26 +75,44 @@ function Home({ mailchimpLink }) {
       </Head>
       <NavigationBar />
       <main>
-        <h1>Home landingpage</h1>
-        <h3>Subscribe for product updates</h3>
-        <MailchimpSubscribe url={mailchimpLink} />
-      </main>
-      <button onClick={() => setIsLaderFeature(!isLaderFeature)}>
-        Toggle features
-      </button>
-      <div>
-        {getFeatureList(isLaderFeature).map(
-          ({ icon, title, description }, index) => (
-            <FeatureCard
-              key={`card-${index}`}
-              icon={icon}
-              title={title}
-              description={description}
-            />
-          )
-        )}
-      </div>
+        <div className={styles.Header}>
+          <div>
+            <h2>Finde eine freie Ladestation in Sekunden</h2>
+            <h3>Werde informiert wenn die App ready ist</h3>
+            <MailchimpSubscribe url={mailchimpLink} />
+          </div>
+          <Image
+            src="/headerImgHome.png"
+            objectFit="contain"
+            width={700}
+            height={400}
+          />
+        </div>
 
+        <div className={styles.Features}>
+          <h2>Features für...</h2>
+          <FeatureToggle
+            isLader={isLaderFeature}
+            onClick={(isLader) => setIsLaderFeature(isLader)}
+          />
+          <div className={styles.featureList}>
+            {getFeatureList(isLaderFeature).map(
+              ({ icon, title, description }, index) => (
+                <FeatureCard
+                  key={`card-${index}`}
+                  icon={icon}
+                  title={title}
+                  description={description}
+                />
+              )
+            )}
+          </div>
+        </div>
+        <div className={styles.Map}>
+          <h2>Unsere Ladestationen</h2>
+          <MapLocations />
+        </div>
+      </main>
       <footer>Some footer</footer>
     </div>
   );
