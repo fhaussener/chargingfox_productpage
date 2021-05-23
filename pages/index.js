@@ -76,7 +76,7 @@ function Home({ mailchimpLink }) {
       <main>
         <div className={styles.Header}>
           <h2>Finde eine freie Ladestation in Sekunden</h2>
-          <h3>Subscribe for product updates</h3>
+          <h3>Werde informiert wenn die App ready ist</h3>
           <MailchimpSubscribe url={mailchimpLink} />
         </div>
 
