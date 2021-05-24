@@ -22,21 +22,25 @@ export const AboutUs = () => (
                 logische Wahl werden.</p>
 
             <h1>Team</h1>
-            <FeatureCard
-                icon={<Image src="/person1.png" width={100} height={100}/>}
-                title={"Fabio Haussener"}
-                description={"CEO"}
-            />
-            <FeatureCard
-                icon={<Image src="/person2.png" width={100} height={100}/>}
-                title={"Thomas Zürcher"}
-                description={"CEO"}
-            />
-            <FeatureCard
-                icon={<Image src="/person3.png" width={100} height={100}/>}
-                title={"Max Mustermann"}
-                description={"Entwickler"}
-            />
+            <div className={styles.Team}>
+                <div className={styles.teamMember}>
+                    <div className={styles.CardContainer}>
+                        <div className={styles.memberImg}>{<Image src="/person1.png" width={200} height={200}/>}</div>
+                        <h2 className={styles.memberName}>{"Fabio Haussener"}</h2>
+                        <p className={styles.memberRole}>{"CEO"}</p>
+                    </div>
+                    <div className={styles.CardContainer}>
+                        <div className={styles.memberImg}>{<Image src="/person2.png" width={200} height={200}/>}</div>
+                        <h2 className={styles.memberName}>{"Thomas Zürcher"}</h2>
+                        <p className={styles.memberRole}>{"CEO"}</p>
+                    </div>
+                    <div className={styles.CardContainer}>
+                        <div className={styles.memberImg}>{<Image src="/person3.png" width={200} height={200}/>}</div>
+                        <h2 className={styles.memberName}>{"Max Mustermann"}</h2>
+                        <p className={styles.memberRole}>{"Entwickler"}</p>
+                    </div>
+                </div>
+            </div>
 
             <h1>Vision</h1>
             <p className={styles.vision}>ChargingFox Vision ist es das Laden des Elektroautos einfacher und praktischer
@@ -47,26 +51,30 @@ export const AboutUs = () => (
                 ist das Elektroauto zu laden als den Benziner zu Tanken.</p>
 
             <h1>Werte</h1>
-            <div className={styles.values}>
-                <div className={styles.value}>
-                    <Image src="/simple.png" width={100} height={100}/>
-                    <p className={styles.vision}>Vereinfache</p>
-                </div>
-                <div className={styles.value}>
-                    <Image src="/user-focus.png" width={100} height={100}/>
-                    <p className={styles.vision}>Fokussiere auf den Benutzer</p>
-                </div>
-                <div className={styles.value}>
-                    <Image src="/experiment.png" width={100} height={100}/>
-                    <p className={styles.vision}>Experimentiere</p>
-                </div>
-                <div className={styles.value} justify-content={"flex-start"}>
-                    <Image src="/customer.png" width={100} height={100}/>
-                    <p className={styles.vision}>Begeistere den Kunden</p>
-                </div>
-                <div className={styles.value} justify-content={"flex-end"}>
-                    <Image src="/brave.png" width={100} height={100}/>
-                    <p className={styles.vision}>Sei mutig</p>
+            <div className={styles.Values}>
+                <div className={styles.valueContent}>
+                    <div className={styles.value}>
+                        <Image src="/simple.png" width={100} height={100}/>
+                        <p>Vereinfache</p>
+                    </div>
+                    <div className={styles.value}>
+                        <div className={styles.value}></div>
+                        <Image src="/user-focus.png" width={100} height={100}/>
+                        <p>Fokussiere auf den Benutzer</p>
+                    </div>
+                    <div className={styles.value}>
+                        <Image src="/experiment.png" width={100} height={100}/>
+                        <p>Experimentiere</p>
+                    </div>
+                    <div className={styles.value}>
+                        <div className={styles.value}></div>
+                        <Image src="/customer.png" width={100} height={100}/>
+                        <p>Begeistere den Kunden</p>
+                    </div>
+                    <div className={styles.value}>
+                        <Image src="/brave.png" width={100} height={100}/>
+                        <p>Sei mutig</p>
+                    </div>
                 </div>
             </div>
 
