@@ -9,7 +9,7 @@ import { FeatureCard } from "../components/FeatureCard";
 import { NavigationBar } from "../components/NavigationBar";
 
 import styles from "../styles/partner.module.scss";
-import {Footer} from "../components/Footer";
+import { Footer } from "../components/Footer";
 
 const partnerFeatures = [
   {
@@ -56,12 +56,47 @@ export const Partner = () => (
       </div>
       <div className={styles.Partner}>
         <h2>Unsere Partner</h2>
-        <div>
-          <div>logo1</div>
-          <div>logo1</div>
-          <div>logo1</div>
-          <div>logo1</div>
-          <div>logo1</div>
+        <div className={styles.partnerLogos}>
+          <div className={styles.logo}>
+            <Image
+              src="/partner1.png"
+              objectFit="contain"
+              width={140}
+              height={100}
+            />
+          </div>
+          <div className={styles.logo}>
+            <Image
+              objectFit="contain"
+              src="/partner2.png"
+              width={100}
+              height={100}
+            />
+          </div>
+          <div className={styles.logo}>
+            <Image
+              objectFit="contain"
+              src="/partner3.png"
+              width={140}
+              height={100}
+            />
+          </div>
+          <div className={styles.logo}>
+            <Image
+              objectFit="contain"
+              src="/partner4.png"
+              width={140}
+              height={100}
+            />
+          </div>
+          <div className={styles.logo}>
+            <Image
+              objectFit="contain"
+              src="/partner5.png"
+              width={140}
+              height={100}
+            />
+          </div>
         </div>
       </div>
       <div className={styles.PartnerFeatures}>
@@ -78,7 +113,7 @@ export const Partner = () => (
         </div>
       </div>
     </main>
-    <Footer/>
+    <Footer />
   </div>
 );
 
