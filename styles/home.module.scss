@@ -8,12 +8,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
 
-  .featureList {
-    display: flex;
-    width: 1000px;
-    justify-content: space-between;
-  }
+.featureList {
+  display: flex;
+  width: 1000px;
+  justify-content: space-between;
 }
 
 .Map {
@@ -21,4 +21,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .featureList {
+    width: auto;
+    align-items: center;
+    flex-direction: column;
+    & > div {
+      margin-bottom: 20px;
+    }
+  }
 }

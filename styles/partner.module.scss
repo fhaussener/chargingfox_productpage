@@ -10,15 +10,48 @@
   align-items: center;
 }
 
+.partnerLogos {
+  height: 180px;
+  display: flex;
+}
+
+.logo:nth-child(2n) {
+  align-self: flex-end;
+}
+
 .PartnerFeatures {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
 
+.featureList {
+  display: flex;
+  width: 1000px;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 1000px) {
   .featureList {
-    display: flex;
-    width: 1000px;
-    justify-content: space-between;
+    width: auto;
+    align-items: center;
+    flex-direction: column;
+    & > div {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .partnerLogos {
+    width: auto;
+    height: auto;
+    align-items: center;
+    flex-direction: column;
+
+    .logo:nth-child(2n) {
+      align-self: center;
+    }
   }
 }
