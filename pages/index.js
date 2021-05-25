@@ -65,14 +65,14 @@ const getFeatureList = (isLaderFeature) => {
   return featuresVermieter;
 };
 
-function Home({ mailchimpLink }) {
+function Home({ mailchimpLink, mapboxToken }) {
   const [isLaderFeature, setIsLaderFeature] = useState(true);
 
   return (
     <div>
       <Head>
         <title> | ChargingFox App</title>
-        <link rel="icon" href="/logo-mini.png"/>
+        <link rel="icon" href="/logo-mini.png" />
       </Head>
       <NavigationBar />
       <main>
@@ -111,7 +111,7 @@ function Home({ mailchimpLink }) {
         </div>
         <div className={styles.Map}>
           <h2>Unsere Ladestationen</h2>
-          <MapLocations />
+          <MapLocations mapboxToken={mapboxToken} />
         </div>
       </main>
       <Footer />
@@ -120,7 +120,10 @@ function Home({ mailchimpLink }) {
 }
 
 Home.getInitialProps = () => {
-  return { mailchimpLink: process.env.NEXT_MAILCHIMP_API_URL };
+  return {
+    mailchimpLink: process.env.NEXT_MAILCHIMP_API_URL,
+    mapboxToken: process.env.NEXT_MAP_TOKEN,
+  };
 };
 
 export default Home;
