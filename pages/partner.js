@@ -9,6 +9,7 @@ import { FeatureCard } from "../components/FeatureCard";
 import { NavigationBar } from "../components/NavigationBar";
 
 import styles from "../styles/partner.module.scss";
+import {Footer} from "../components/Footer";
 
 const partnerFeatures = [
   {
@@ -35,7 +36,7 @@ export const Partner = () => (
   <div>
     <Head>
       <title>Partners and Sponsors</title>
-      <link rel="icon" href="/favicon.ico" />
+      <link rel="icon" href="/logo-mini.png" />
     </Head>
     <NavigationBar />
     <main>
@@ -77,8 +78,7 @@ export const Partner = () => (
         </div>
       </div>
     </main>
-
-    <footer>Some footer</footer>
+    <Footer/>
   </div>
 );
 

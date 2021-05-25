@@ -23,7 +23,7 @@ export const NavigationBar = () => {
     const {pathname} = useRouter();
     return (
         <div className={styles.menuContainer}>
-            <Image src="/logo.png" alt="Logo" width={300} height={75}/>
+            <Image src="/logo.png" alt="Logo" objectFit="contain" width={300} height={75}/>
             <div className={styles.navigation}>
             {navigationItems.map(({label, path}) => (
                 <Link key={path} href={path}>

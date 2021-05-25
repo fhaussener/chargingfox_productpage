@@ -3,14 +3,14 @@ import {NavigationBar} from "../components/NavigationBar";
 
 import styles from "../styles/aboutUs.module.scss";
 import Image from 'next/image'
-import {FeatureCard} from "../components/FeatureCard";
+import {Footer} from "../components/Footer";
 
 
 export const AboutUs = () => (
     <div>
         <Head>
             <title>About us</title>
-            <link rel="icon" href="/favicon.ico"/>
+            <link rel="icon" href="/logo-mini.png"/>
         </Head>
         <NavigationBar/>
         <main className={styles.main}>
@@ -79,7 +79,7 @@ export const AboutUs = () => (
             </div>
 
         </main>
-        <footer>Some footer</footer>
+        <Footer/>
     </div>
 );
 

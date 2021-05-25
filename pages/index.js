@@ -14,6 +14,7 @@ import { FeatureCard } from "../components/FeatureCard";
 import { NavigationBar } from "../components/NavigationBar";
 import { FeatureToggle } from "../components/FeatureToggle";
 import { MapLocations } from "../components/Map";
+import { Footer } from "../components/Footer";
 
 import styles from "../styles/home.module.scss";
 
@@ -70,8 +71,8 @@ function Home({ mailchimpLink }) {
   return (
     <div>
       <Head>
-        <title>Charging Fox App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title> | ChargingFox App</title>
+        <link rel="icon" href="/logo-mini.png"/>
       </Head>
       <NavigationBar />
       <main>
@@ -113,7 +114,7 @@ function Home({ mailchimpLink }) {
           <MapLocations />
         </div>
       </main>
-      <footer>Some footer</footer>
+      <Footer />
     </div>
   );
 }
