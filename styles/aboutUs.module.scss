@@ -52,7 +52,7 @@
   }
 }
 
-.Values{
+.Values {
   font-size: 22px;
   width: 100%;
   height: 400px;
@@ -60,14 +60,24 @@
   flex-direction: column;
   align-items: center;
 
-  .valueContent{
+  .valueContent {
     display: flex;
     width: 1000px;
     justify-content: space-between;
 
-    .value{
+    .value {
       width: 320px;
       height: 180px;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .teamMember {
+    align-items: center;
+    flex-direction: column;
+    & > div {
+      margin-bottom: 20px;
     }
   }
 }
