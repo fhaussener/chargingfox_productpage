@@ -35,6 +35,8 @@ export const MapLocations = () => {
         {...viewport}
         mapboxApiAccessToken="pk.eyJ1IjoiZmFiaW9oYXVzc2VuZXIiLCJhIjoiY2twM3NtOTZnMGVtbTJvbGVqZXI4YzR0eiJ9.ZMvaLb2Poq4u3jv8PBozSA"
         onViewportChange={(nextViewport) => setViewport(nextViewport)}
+        width="100%"
+        height="100%"
       >
         {locations.map((location, index) => (
           <Marker
@@ -56,7 +58,7 @@ export const MapLocations = () => {
                   cy="25.738"
                   r="8.33982"
                   stroke="white"
-                  stroke-width="3.32036"
+                  strokeWidth="3.32036"
                 />
               </g>
               <defs>
@@ -67,9 +69,9 @@ export const MapLocations = () => {
                   width="49.8832"
                   height="49.8832"
                   filterUnits="userSpaceOnUse"
-                  color-interpolation-filters="sRGB"
+                  colorInterpolationFilters="sRGB"
                 >
-                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                  <feFlood floodOpacity="0" result="BackgroundImageFix" />
                   <feColorMatrix
                     in="SourceAlpha"
                     type="matrix"
