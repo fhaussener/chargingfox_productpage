@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Image from "next/image";
+
 import {
   MapIcon,
   CreditCardIcon,
@@ -47,7 +47,7 @@ export const Partner = () => (
             gesponserte Ladestationen bewerben
           </h3>
         </div>
-        <Image
+        <img
           src="/headerImgPartner.png"
           objectFit="contain"
           width={700}
@@ -58,7 +58,7 @@ export const Partner = () => (
         <h2>Unsere Partner</h2>
         <div className={styles.partnerLogos}>
           <div className={styles.logo}>
-            <Image
+            <img
               src="/partner1.png"
               objectFit="contain"
               width={140}
@@ -66,7 +66,7 @@ export const Partner = () => (
             />
           </div>
           <div className={styles.logo}>
-            <Image
+            <img
               objectFit="contain"
               src="/partner2.png"
               width={100}
@@ -74,7 +74,7 @@ export const Partner = () => (
             />
           </div>
           <div className={styles.logo}>
-            <Image
+            <img
               objectFit="contain"
               src="/partner3.png"
               width={140}
@@ -82,7 +82,7 @@ export const Partner = () => (
             />
           </div>
           <div className={styles.logo}>
-            <Image
+            <img
               objectFit="contain"
               src="/partner4.png"
               width={140}
@@ -90,7 +90,7 @@ export const Partner = () => (
             />
           </div>
           <div className={styles.logo}>
-            <Image
+            <img
               objectFit="contain"
               src="/partner5.png"
               width={140}

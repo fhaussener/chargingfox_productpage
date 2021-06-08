@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { useState } from "react";
-import Image from "next/image";
+
 import MailchimpSubscribe from "react-mailchimp-subscribe";
 import {
   MapIcon,
@@ -82,7 +82,7 @@ function Home({ mailchimpLink, mapboxToken }) {
             <h3>Werde informiert wenn die App ready ist</h3>
             <MailchimpSubscribe url={mailchimpLink} />
           </div>
-          <Image
+          <img
             src="/headerImgHome.png"
             objectFit="contain"
             width={700}

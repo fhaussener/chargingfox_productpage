@@ -1,11 +1,13 @@
 {
   "name": "chargingfox_productpage",
   "version": "0.1.0",
+  "homepage": ".",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "export": "next export"
   },
   "dependencies": {
     "@heroicons/react": "^1.0.1",
