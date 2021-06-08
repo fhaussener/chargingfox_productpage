@@ -111,7 +111,7 @@ function Home({ mailchimpLink, mapboxToken }) {
         </div>
         <div className={styles.Map}>
           <h2>Unsere Ladestationen</h2>
-          <MapLocations mapboxToken={mapboxToken} />
+          <MapLocations />
         </div>
       </main>
       <Footer />
@@ -122,7 +122,6 @@ function Home({ mailchimpLink, mapboxToken }) {
 Home.getInitialProps = () => {
   return {
     mailchimpLink: process.env.NEXT_MAILCHIMP_API_URL,
-    mapboxToken: process.env.NEXT_MAP_TOKEN,
   };
 };
 
