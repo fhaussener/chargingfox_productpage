@@ -1,20 +1,58 @@
 .menuContainer {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
-.navigation{
+.navigation {
   display: flex;
   justify-content: flex-end;
 }
 
 .menuItem {
-  margin: 0 50px 0 0;
-  font-size: 24px;
-  padding: 60px 0;
+  margin: 12px 50px 0 0;
+  font-size: 20px;
+  padding-bottom: 4px;
 }
 
 .selected {
   font-weight: bold;
-  text-decoration: underline;
+  border-bottom: 3px solid black;
+}
+
+.Menu {
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+}
+
+.menuOverlay {
+  background-color: white;
+  overflow-y: hidden;
+  position: absolute;
+
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  z-index: 9999;
+}
+
+.Close {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: 20px;
+  top: 20px;
+}
+
+.menuVertical {
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+.logoSmall {
+  text-align: center;
+  margin-top: 20px;
 }
