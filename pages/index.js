@@ -15,6 +15,7 @@ import { NavigationBar } from "../components/NavigationBar";
 import { FeatureToggle } from "../components/FeatureToggle";
 import { MapLocations } from "../components/Map";
 import { Footer } from "../components/Footer";
+import { CustomForm } from "../components/CustomForm";
 
 import styles from "../styles/home.module.scss";
 
@@ -77,17 +78,21 @@ function Home({ mailchimpLink, mapboxToken }) {
       <NavigationBar />
       <main>
         <div className={styles.Header}>
-          <div>
+          <div className={styles.textHeader}>
             <h2>Finde eine freie Ladestation in Sekunden</h2>
             <h3>Werde informiert wenn die App ready ist</h3>
-            <MailchimpSubscribe url={mailchimpLink} />
+            <MailchimpSubscribe
+              url={mailchimpLink}
+              render={({ subscribe, status, message }) => (
+                <CustomForm
+                  status={status}
+                  message={message}
+                  onValidated={(formData) => subscribe(formData)}
+                />
+              )}
+            />
           </div>
-          <Image
-            src="/headerImgHome.png"
-            objectFit="contain"
-            width={700}
-            height={400}
-          />
+          <div className={styles.imageHeader}></div>
         </div>
 
         <div className={styles.Features}>
@@ -111,7 +116,7 @@ function Home({ mailchimpLink, mapboxToken }) {
         </div>
         <div className={styles.Map}>
           <h2>Unsere Ladestationen</h2>
-          <MapLocations mapboxToken={mapboxToken} />
+          <MapLocations />
         </div>
       </main>
       <Footer />
@@ -122,7 +127,6 @@ function Home({ mailchimpLink, mapboxToken }) {
 Home.getInitialProps = () => {
   return {
     mailchimpLink: process.env.NEXT_MAILCHIMP_API_URL,
-    mapboxToken: process.env.NEXT_MAP_TOKEN,
   };
 };
 
