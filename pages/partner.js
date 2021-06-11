@@ -41,18 +41,13 @@ export const Partner = () => (
     <NavigationBar />
     <main>
       <div className={styles.Header}>
-        <div>
-          <h3>
+        <div className={styles.textHeader}>
+          <h2>
             Mit dem ChargingFox Partner Programm können sie auf unserer App
             gesponserte Ladestationen bewerben
-          </h3>
+          </h2>
         </div>
-        <Image
-          src="/headerImgPartner.png"
-          objectFit="contain"
-          width={700}
-          height={400}
-        />
+        <div className={styles.imageHeader}></div>
       </div>
       <div className={styles.Partner}>
         <h2>Unsere Partner</h2>
