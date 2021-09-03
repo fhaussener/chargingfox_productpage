@@ -50,7 +50,7 @@ export const Partner = () => (
         <div className={styles.imageHeader}></div>
       </div>
       <div className={styles.Partner}>
-        <h2>Unsere Partner</h2>
+        <h2>Unsere Partner </h2>
         <div className={styles.partnerLogos}>
           <div className={styles.logo}>
             <Image
